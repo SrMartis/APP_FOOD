@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"             
+             mc:Ignorable="d"
+             x:Class="APP_FOOD.MainPage"
+             >
+    <StackLayout Spacing="10" Padding="40">
+        <!-- Place new controls here -->
+
+        <maps:Map x:Name="Local_Restaurante"></maps:Map>
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+        <Button Text="Localizar" Clicked="Localizar_Clicked"></Button>
+                       
+        <Button Text="Calcular" Clicked="Calcular_Clicked">
+        </Button>
+        <Button Text="Inserir Dados">
+            
+        </Button>
+        <Button Text="Histórico">
+
+        </Button>
+
+        <Button Text="Sobre" Clicked="Sobre_Clicked">
+    
+        </Button>
+    </StackLayout>
+
+</ContentPage>

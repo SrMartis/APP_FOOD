@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="APP_FOOD.Sobre"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Padding="50">
+            <Image Source="NeVastum.jpg"></Image>
+            <Label Text="Equipe" Padding="10"
+                HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"
+                   FontSize="25"/>
+            <Label Text="Igor Martins - 082150171" Padding="5"
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="18"/>
+            <Label Text="Lucas Silva Sousa - 082150205" Padding="5"
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="18"/>
+            <Label Text="Renan Dias - 082150205" Padding="5"
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="18"/>
+
+            <Button Text="VOLTAR" VerticalOptions="CenterAndExpand"
+                   Clicked="Voltar_Clicked"
+                   ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

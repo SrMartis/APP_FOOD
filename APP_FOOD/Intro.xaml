@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             xmlns:d="http://xamarin.com/schemas/2014/forms/design"             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"             mc:Ignorable="d"             x:Class="APP_FOOD.Intro">    <ContentPage BackgroundColor="White">
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="25" Padding="50">
+            <Image Source="Logo.jpg" VerticalOptions="CenterAndExpand"></Image>
+            <Label 
+                Text="Cognita Cibus é uma ferramenta de auxílio para seu restaurante ou refeitório."
+                XAlign="Center"
+                Font="20"
+            />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage BackgroundColor="White">
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="25" Margin="50">
+            <Image Source="Logo.jpg" VerticalOptions="CenterAndExpand"></Image>
+            <Label 
+                Text="Descubra quantas pessoas em potêncial podem frequentar seu refeitório em um determinado dia!"
+                XAlign="Center"
+                Font="20"
+                >
+            </Label>
+            <Button                
+                Text="Descubra"                                
+                BorderColor="Black"
+                BorderRadius="5"                 
+                Opacity="0.9"
+                FontSize="Medium"
+                Clicked="Button_Clicked"
+            />
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>
