@@ -2,33 +2,52 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"             
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:model="clr-namespace:APP_FOOD.Modelos"
              mc:Ignorable="d"
              x:Class="APP_FOOD.MainPage"
+             BackgroundColor="White"
              >
-    <StackLayout Spacing="10" Padding="40">
-        <!-- Place new controls here -->
-
-        <maps:Map x:Name="Local_Restaurante"></maps:Map>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-
-        <Button Text="Localizar" Clicked="Localizar_Clicked"></Button>
-                       
-        <Button Text="Calcular" Clicked="Calcular_Clicked">
+    <StackLayout Spacing="10" Margin="40">
+        <Image Source="tomato512.jpg"                 
+               WidthRequest="256"
+               HeightRequest="256"
+               HorizontalOptions="CenterAndExpand"                              
+         ></Image>
+        <Button Text="Calcular" 
+                FontAttributes="Bold" 
+                Clicked="Calcular_Clicked"
+                CornerRadius="20"
+                BackgroundColor="#F03838"
+                TextColor="White"                
+                >
         </Button>
-        <Button Text="Inserir Dados">
-            
+        <Button Text="Inserir Dados" 
+                FontAttributes="Bold" 
+                Clicked="Inserir_Clicked"
+                CornerRadius="20"
+                BackgroundColor="#F03838"
+                TextColor="White">
         </Button>
-        <Button Text="Histórico">
-
+        <Button Text="Consultar Registros" 
+                FontAttributes="Bold" 
+                Clicked="Consulta_Clicked"
+                 CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                >
         </Button>
-
-        <Button Text="Sobre" Clicked="Sobre_Clicked">
-    
-        </Button>
+        <Button Text="Sobre" FontAttributes="Bold" 
+                Clicked="Sobre_Clicked"
+                 CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"></Button>
+        <Button Text="Sair" FontAttributes="Bold" 
+                Clicked="Sair_Clicked"
+                 CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                ></Button>
     </StackLayout>
 
 </ContentPage>

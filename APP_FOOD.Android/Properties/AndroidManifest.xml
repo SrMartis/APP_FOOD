@@ -1,8 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.app_food" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
-	<application android:label="APP_FOOD.Android"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.2" package="nevastum.app_food" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
+	<application android:icon="@drawable/prato" android:label="Cognita">
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBUmOuTbbt2R4ap63wwSR8rdODEL4WlniE"></meta-data>
+		<meta-data android:name="com.google.android.gms.version" android:value="@19/google_play_services_version"></meta-data>
+		<uses-library android:name="org.apache.http.legacy" android:required="false"></uses-library>
+	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 </manifest>

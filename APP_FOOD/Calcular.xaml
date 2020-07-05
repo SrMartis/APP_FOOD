@@ -5,11 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="APP_FOOD.Calcular">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout Spacing="15" Padding="50">
+            <Label Text="EM BREVE!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Voltar" HorizontalOptions="Center" Clicked="Voltar_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

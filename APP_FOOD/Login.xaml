@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="APP_FOOD.Login" 
+             BackgroundColor="White">
+    <ScrollView>
+        <StackLayout Spacing="10" Margin="40" >
+            <Image Source="talheres.jpg" WidthRequest="128" HeightRequest="128"></Image>
+            <Entry x:Name="campo_usuario" 
+               Placeholder="Digite seu usuário">
+            </Entry>
+            <Entry x:Name="campo_senha" Placeholder="Digite a sua senha" IsPassword="True"></Entry>
+            <Button Text="ENTRAR" 
+                FontAttributes="Bold" 
+                Clicked="Entrar_Clicked" 
+                CornerRadius="20" 
+                HorizontalOptions="Fill"
+                BackgroundColor="#F03838"
+                TextColor="White"
+        ></Button>
+            <Label Text="Ainda não tem cadastro?"></Label>
+            <Button Text="CADASTRE-SE AGORA" 
+                FontAttributes="Bold" 
+                Clicked="Cadastrar_Clicked" 
+                CornerRadius="20" 
+                HorizontalOptions="Fill"
+                BackgroundColor="#F03838"
+                TextColor="White"
+         ></Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -7,24 +7,27 @@
              x:Class="APP_FOOD.Sobre"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout Padding="50">
+        <StackLayout Spacing="12" Margin="50">
             <Image Source="NeVastum.jpg"></Image>
-            <Label Text="Equipe" Padding="10"
-                HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="Center"
-                   FontSize="25"/>
+            <Label Text="DESENVOLVEDORES"  FontAttributes="Bold"
+                HorizontalOptions="Center" FontSize="25"/>
             <Label Text="Igor Martins - 082150171" Padding="5"
                 HorizontalOptions="CenterAndExpand" 
                    FontSize="18"/>
-            <Label Text="Lucas Silva Sousa - 082150205" Padding="5"
+            <Label Text="Lucas Silva - 082150205" Padding="5"
                 HorizontalOptions="CenterAndExpand" 
                    FontSize="18"/>
             <Label Text="Renan Dias - 082150205" Padding="5"
                 HorizontalOptions="CenterAndExpand" 
                    FontSize="18"/>
 
-            <Button Text="VOLTAR" VerticalOptions="CenterAndExpand"
+            <Button Text="VOLTAR"
                    Clicked="Voltar_Clicked"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
                    ></Button>
         </StackLayout>
     </ContentPage.Content>

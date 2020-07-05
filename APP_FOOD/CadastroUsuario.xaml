@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:model="clr-namespace:APP_FOOD.Modelos"
+             mc:Ignorable="d"
+             x:Class="APP_FOOD.CadastroUsuario">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Spacing="5" Padding="40">
+                <StackLayout>
+                    <Label Text="DADOS DO USUÁRIO" 
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="16" 
+                   FontAttributes="Bold">
+                    </Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Text="Nome" 
+                               Grid.Column="0" 
+                               Grid.Row="0"
+                               VerticalTextAlignment="Center">
+                        </Label>
+                        <Entry x:Name="campo_usuario_nome" 
+                               Grid.Column="1"  
+                               Grid.Row="0" 
+                               >
+                        </Entry>
+                        <Label Text="Email" 
+                               Grid.Column="0" 
+                               Grid.Row="1"
+                               VerticalTextAlignment="Center">
+                        </Label>
+                        <Entry x:Name="campo_usuario_email" 
+                               Grid.Column="1"
+                               Grid.Row="1">
+                        </Entry>
+                        <Label Text="Senha" 
+                               Grid.Column="0"
+                               Grid.Row="2"  
+                               VerticalTextAlignment="Center"
+                         ></Label>
+                        <Entry x:Name="campo_usuario_senha" 
+                               HorizontalOptions="Fill" 
+                               IsPassword="True"
+                               Grid.Column="1"
+                               Grid.Row="2"  
+                         ></Entry>
+                    </Grid>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="DADOS DO RESTAURANTE" FontAttributes="Bold" HorizontalOptions="Center" FontSize="16"></Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Text="Nome Restaurante" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" ></Label>
+                        <Entry x:Name="campo_restaurante_nome" Grid.Column="1" Grid.Row="0" HorizontalOptions="Fill"></Entry>
+
+                        <Label Text="CEP" Grid.Column="0" VerticalTextAlignment="Center" Grid.Row="1" ></Label>
+                        <Entry x:Name="campo_restaurante_cep" Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill" TextChanged="Cep_TextChanged" MaxLength="9" Keyboard="Numeric"></Entry>
+
+                        <Label Text="Endereço/Logradouro" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="2" ></Label>
+                        <Entry x:Name="campo_restaurante_logradouro" Grid.Column="1" Grid.Row="2" HorizontalOptions="Fill"></Entry>
+
+                        <Label Text="Bairro" Grid.Column="0" VerticalTextAlignment="Center" Grid.Row="3" ></Label>
+                        <Entry x:Name="campo_restaurante_bairro" Grid.Row="3" Grid.Column="1" HorizontalOptions="Fill"></Entry>
+
+                        <Label Text="Cidade" Grid.Column="0"  VerticalTextAlignment="Center" Grid.Row="4" ></Label>
+                        <Entry x:Name="campo_restaurante_cidade"  Grid.Row="4" Grid.Column="1" HorizontalOptions="Fill"></Entry>
+
+                        <Label Text="Estado" Grid.Column="0" VerticalTextAlignment="Center" Grid.Row="5" ></Label>
+                        <Entry x:Name="campo_restaurante_estado"  Grid.Row="5" Grid.Column="1" HorizontalOptions="Fill"></Entry>
+                    </Grid>
+                </StackLayout>
+                <Button Text="SALVAR" FontAttributes="Bold" 
+                    Clicked ="Salvar_Clicked" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                    Margin="0,5">
+                </Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

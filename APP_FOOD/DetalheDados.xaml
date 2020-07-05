@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="APP_FOOD.DetalheDados"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="50">
+            <Label FontSize="18" Text="VISUALIZAÇÃO DE DADOS" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+
+            <DatePicker x:Name="campo_data" IsEnabled="False"></DatePicker>
+            <Label FontSize="14" Text="Total de comida produzida em KG" HorizontalOptions="Center"></Label>
+            <Entry x:Name="campo_total_produzido" 
+                   Text="{Binding Total_Produzido}" 
+                   HorizontalOptions="Fill" Keyboard="Numeric"
+                   IsEnabled="False"
+             ></Entry>
+
+            <Label FontSize="14" Text="Número de refeições estimadas" HorizontalOptions="Center"></Label>
+            <Entry x:Name="campo_refeicoes_estimadas" IsEnabled="False" Text="{Binding Refeicoes_Estimadas}" HorizontalOptions="Fill" Keyboard="Numeric"></Entry>
+
+            <Label FontSize="14"  Text="Número de servidas" HorizontalOptions="Center"></Label>
+            <Entry x:Name="campo_refeicoes_servidas" IsEnabled="False" Text="{Binding Refeicoes_Servidas}" HorizontalOptions="Fill" Keyboard="Numeric"></Entry>
+
+            <Label FontSize="14"  Text="Total Desperdicado" HorizontalOptions="Center"></Label>
+            <Entry x:Name="campo_total_desperdicado" IsEnabled="False" Text="{Binding Total_Desperdicado}" HorizontalOptions="Fill" Keyboard="Numeric"></Entry>
+
+            <StackLayout Orientation="Horizontal"> 
+            <Button Text="VOLTAR" Clicked="Voltar_Clicked"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                    x:Name="botao_voltar"></Button>
+            <Button Text="EDITAR"
+                    Clicked="HabilitarCampos"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                    x:Name="botao_editar"></Button>
+             <Button Text="SALVAR"
+                    Clicked="Salvar"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                    x:Name="botao_salvar"
+                     IsVisible="false"
+                     ></Button>
+             <Button Text="CANCELAR"
+                    Clicked="Cancelar"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                    x:Name="botao_cancelar"
+                     IsVisible="false"
+                    ></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

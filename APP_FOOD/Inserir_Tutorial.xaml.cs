@@ -1,6 +1,4 @@
-﻿using APP_FOOD.Banco;
-using APP_FOOD.Modelos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace APP_FOOD
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Intro : CarouselPage
+    public partial class Inserir_Tutorial : CarouselPage
     {
-        public Intro()
-        {            
+        public Inserir_Tutorial()
+        {
             InitializeComponent();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new NavigationPage(new Login()) { BarBackgroundColor=Color.FromHex("F03838")};
+        {            
+            //QUANDO O USUÁRIO FINALIZA O TUTORIAL UMA MENSAGEM É ENVIADA AO MAIN.
+            MessagingCenter.Send(this, "Usuário fez o tutorial");            
         }
     }
 }

@@ -19,7 +19,7 @@ namespace APP_FOOD
 
         private void Voltar_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new MainPage();
+            Navigation.PopAsync();
         }
     }
 }

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="APP_FOOD.Inserir_Tutorial">
+  <ContentPage>
+        <StackLayout Spacing="10" Padding="40">
+            <Image Source="form.png" VerticalOptions="CenterAndExpand"></Image>
+            <Label FontSize="15" Text="Utilize este formulário para cadatrar dados históricos do seu restaurante"></Label>
+            <Label FontSize="15" Text="Este dados são úteis para a previsão do número de pesssoas"></Label>
+        </StackLayout>
+  </ContentPage>
+    <ContentPage>
+        <StackLayout Spacing="10" Padding="40">
+            <Image Source="corrigir.png" VerticalOptions="CenterAndExpand"></Image>
+            <Label FontSize="15" Text="Quanto mais dados mais assertiva será a previsão!"></Label>
+            <Button BackgroundColor="#FF50C5FF" Text="Seguir em Frente" Clicked="Button_Clicked" VerticalOptions="Center"></Button>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>

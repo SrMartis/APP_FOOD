@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_FOOD.CadastroDados"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing= "10" Padding="40">
+                <Label FontSize="16" Text="Cadastro de informações" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"/>
+                <Image Source="tomato512.jpg" 
+                   HorizontalOptions="CenterAndExpand"
+                   WidthRequest="128"
+                   HeightRequest="128"
+             ></Image>
+                <DatePicker x:Name="campo_data"></DatePicker>
+                <Label Text="Total de comida produzida em KG" HorizontalOptions="Center"></Label>
+                <Entry x:Name="campo_total_produzido" HorizontalOptions="Fill" Keyboard="Numeric"></Entry>
+
+                <Label Text="Número de refeições estimadas" HorizontalOptions="Center"></Label>
+                <Entry x:Name="campo_refeicoes_estimadas" HorizontalOptions="Fill" Keyboard="Numeric"></Entry>
+
+                <Label Text="Número de servidas" HorizontalOptions="Center"></Label>
+                <Entry x:Name="campo_refeicoes_servidas" HorizontalOptions="Fill" Keyboard="Numeric"></Entry>
+
+                <Label  Text="Total Desperdicado" HorizontalOptions="Center"></Label>
+                <Entry x:Name="campo_total_desperdicado" HorizontalOptions="Fill" Keyboard="Numeric"></Entry>
+
+                <Button Text="INSERIR"                      
+                    Clicked="Salvar_Clicked"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                    ></Button>
+                <Button Text="VOLTAR"
+                    Clicked="Voltar_Clicked"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White">
+                </Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

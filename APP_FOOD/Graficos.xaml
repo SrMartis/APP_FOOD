@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:chart="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="APP_FOOD.Graficos">
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical" Spacing="10" Margin="30">
+            <Label Text="Grafico Diário de Produção em KG" HorizontalOptions="Fill" FontAttributes="Bold"></Label>
+            <chart:ChartView x:Name="Grafico1" HeightRequest="150"></chart:ChartView>
+            
+            <Label Text="Grafico Diário de Desperdicio em KG" HorizontalOptions="Fill" FontAttributes="Bold" ></Label>
+            <chart:ChartView x:Name="Grafico2" HeightRequest="150"></chart:ChartView>
+
+            <Label Text="% Desperdicio" HorizontalOptions="Fill" FontAttributes="Bold"></Label>
+            <chart:ChartView x:Name="Grafico3" HeightRequest="150"></chart:ChartView>
+            <chart:ChartView x:Name="Grafico4" HeightRequest="150"></chart:ChartView>
+            <chart:ChartView x:Name="Grafico5" HeightRequest="150"></chart:ChartView>
+            <chart:ChartView x:Name="Grafico6" HeightRequest="150"></chart:ChartView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

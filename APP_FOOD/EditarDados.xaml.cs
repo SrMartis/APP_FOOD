@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace APP_FOOD
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Calcular : ContentPage
-    {        
-        public Calcular()
-        {            
-           InitializeComponent();            
-        }
-
-        private void Voltar_Clicked(object sender, EventArgs e)
+    public partial class EditarDados : ContentPage
+    {
+        public EditarDados()
         {
-            Navigation.PopAsync();
+            InitializeComponent();
         }
     }
 }

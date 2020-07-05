@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="APP_FOOD.ConsultaDados"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="30">
+            <Label Text="VISUALIZE SEU HISTÓRICO DE DADOS" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="16"
+                   />
+            <StackLayout Orientation="Horizontal" Margin="0,5">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Button Text="ADICIONAR" 
+                            Clicked="PaginaCadastro" 
+                            FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"
+                     />
+                </StackLayout>
+                <StackLayout  HorizontalOptions="FillAndExpand">
+                    <Button Text="VER GRÁFICO" Clicked="MostrarGrafico"
+                                                FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="20"
+                    BackgroundColor="#F03838"
+                    TextColor="White"/>
+                    
+                </StackLayout>
+            </StackLayout>
+            <ScrollView>
+                <ListView x:Name="ListaDados">
+                    <ListView.Header>
+                        <Grid ColumnSpacing="5" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="55"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="DATA" Grid.Column="0"
+                                   HorizontalTextAlignment="Center" 
+                                   Padding="3"
+                                   FontAttributes="Bold" 
+                                   BackgroundColor="#F03838"
+                                   TextColor="White"
+                                   >
+                            </Label>
+                            <Label Text="PRODUZIDO" 
+                                   Grid.Column="1" 
+                                   HorizontalTextAlignment="Center" 
+                                   Padding="3"
+                                   FontAttributes="Bold" 
+                                   BackgroundColor="#F03838"
+                                   TextColor="White"
+                                   ></Label>
+                            <Label Text="%PERDA" Grid.Column="2" 
+                                   HorizontalTextAlignment="Center" 
+                                   Padding="3"
+                                   FontAttributes="Bold" 
+                                   BackgroundColor="#F03838"
+                                   TextColor="White"
+                                   ></Label>
+                            <Label Text="AÇÃO" Grid.Column="3" 
+                                   HorizontalTextAlignment="Center" 
+                                   Padding="3"
+                                   FontAttributes="Bold" 
+                                   BackgroundColor="#F03838"
+                                   TextColor="White"></Label>
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="55"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Data}" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                                    <Label Text="{Binding Total_Produzido}" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                                    <Label Text="{Binding Porcentagem_Desperdicio}" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center"></Label>
+                                    <Label Text="..." Grid.Column="3" VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="VerMaisAction" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
